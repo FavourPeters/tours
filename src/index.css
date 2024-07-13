@@ -1,13 +1,131 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.title {
+  text-align: center;
+  margin: 1rem 0;
+}
+.prices {
+  background-color: #0808ff;
+  padding: 0.2rem 1rem;
+  color: white;
+}
+h3 {
+  font-size: 2rem;
+}
+button {
+  width: 100%;
+  background-color: #0808ff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+.images {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+
+.tour {
+  margin: 4rem 3rem;
+  /* width: 30%; */
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.interested {
+  text-align: center;
+  border: 2px solid #0808ff;
+  transition: color 0.3s, background 0.3s;
+}
+
+.interested:hover {
+  cursor: pointer;
+  background: #0808ff;
+  color: white;
+}
+
+.tour-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.readmore {
+  background: none;
+  border: none;
+  color: #2e2eff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.no-tours {
+  color: rgb(254, 37, 37);
+  font-size: 1.5rem;
+}
+
+/* loader */
+.loader-background {
+  display: grid;
+  place-content: center;
+}
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75;
+  --c: no-repeat linear-gradient(#000 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 20% 50%;
+  animation: l6 1s infinite linear;
+}
+@keyframes l6 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+.underline {
+  width: 6rem;
+  height: 0.25rem;
+  background: #0808ff;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 860px) {
+  .tour {
+    /* max-width: 800px; */
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .tour {
+    /* max-width: 700px; */
+    grid-template-columns: auto auto auto;
+  }
 }
